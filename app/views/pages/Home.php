@@ -1,1 +1,3 @@
-Hallo it's me
+<?php
+View::partial('carousel', '0');
+?>
