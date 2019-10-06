@@ -31,3 +31,17 @@ body{
     color:rgb(255, 142, 21) !important;
 
 }
+
+.slide-show{
+    background-color:#fff;
+    min-height:80vh;
+    border-radius: 10px;
+    padding:10px;
+    border:1px solid rgb(255, 142, 21);
+    background-color: rgba(50,50,50,0.99);
+    box-shadow:0px 10px 15px rgba(10,10,10,0.9);
+}
+
+.slide-show-setting{
+    margin:30px 0px 30px 0px;
+}
