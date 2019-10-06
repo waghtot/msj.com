@@ -1,5 +1,5 @@
 *{
-    font-size:12px;
+    font-size:13px;
     color:#414141;
 }
 
@@ -7,6 +7,7 @@ body{
     /* min-height:100vh; */
     background-image: url(../igm/wallPattern_01a.jpeg);
     background-size:500px;
+    background-attachment: fixed;
     /* box-shadow:20px 20px 50px 10px rgba(0,0,0,5) inset */
 }
 
@@ -38,10 +39,37 @@ body{
     border-radius: 10px;
     padding:10px;
     border:1px solid rgb(255, 142, 21);
-    background-color: rgba(50,50,50,0.99);
+    background-color: rgba(50,50,50,0.95);
     box-shadow:0px 10px 15px rgba(10,10,10,0.9);
 }
 
-.slide-show-setting{
-    margin:30px 0px 30px 0px;
+.slide-show-setting, .topic-white-list-setting, .topic-grey-list-setting{
+    /* background-color: rgba(0,0,0, 0.7); */
+    padding-top:40px;
+    padding-bottom:40px;
+}
+
+.topic-white-list-setting{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.topic-grey-list-setting{
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+
+
+/* all about cards */
+.card-image{
+    min-height:200px;
+    background-color:rgb(30, 30, 30);
+    background-image:url(../igm/wallpainting_02.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+}
+
+.card-header{
+    padding:15px 0px 15px 0px;
+    margin:0px;
 }
