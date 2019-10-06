@@ -1,7 +1,21 @@
+
+/* all about text */
+
 *{
     font-size:13px;
     color:#414141;
 }
+
+.dark{
+    color:#414141;
+}
+
+.white{
+    color:#fff;
+}
+
+
+/* end text */
 
 body{
     /* min-height:100vh; */
@@ -35,15 +49,18 @@ body{
 
 .slide-show{
     background-color:#fff;
-    min-height:80vh;
-    border-radius: 10px;
-    padding:10px;
-    border:1px solid rgb(255, 142, 21);
-    background-color: rgba(50,50,50,0.95);
+    /* min-height:50vh; */
+    min-height:500px;
+    /* border-radius: 10px; */
+    /* padding:10px; */
+    border:1px solid rgb(148, 82, 11);
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.98)  20%, rgba(0,0,0,0.9)  90%);
+    /* background-color: rgba(0,0,0,0.9); */
     box-shadow:0px 10px 15px rgba(10,10,10,0.9);
+    padding:10px 10px 5px 10px;
 }
 
-.slide-show-setting, .topic-white-list-setting, .topic-grey-list-setting{
+.slide-show-setting, .topic-white-list-setting, .topic-grey-list-setting, .topic-clear-list-setting, .topic-glass-list-setting, .footer-list-setting{
     /* background-color: rgba(0,0,0, 0.7); */
     padding-top:40px;
     padding-bottom:40px;
@@ -53,10 +70,22 @@ body{
     background-color: rgba(255, 255, 255, 1);
 }
 
-.topic-grey-list-setting{
-    background-color: rgba(0, 0, 0, 0.95);
+.topic-glass-list-setting{
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
+.topic-grey-list-setting{
+    background-color: rgb(40, 40, 40);
+}
+
+.topic-clear-list-setting{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.footer-list-setting{
+    background: linear-gradient(0deg, rgb(128, 71, 10) 0%, rgb(206, 114, 17)  100%);
+    border-top:1px solid #000;
+}
 
 
 /* all about cards */
@@ -67,9 +96,22 @@ body{
     background-repeat: no-repeat;
     background-position: center center;
     background-size:cover;
+    margin-bottom:30px;
 }
 
 .card-header{
     padding:15px 0px 15px 0px;
     margin:0px;
+}
+
+.slide_01{
+    background-image:url(../igm/wallpainting_02.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+    min-height:500px;
+}
+
+.carousel, .slick-slider{
+    padding:0px;
 }
