@@ -8,5 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Home' => $baseDir . '/app/controllers/Home.php',
     'Router' => $baseDir . '/app/config/Router.php',
+    'SiteBuilder' => $baseDir . '/app/controllers/SiteBuilder.php',
     'View' => $baseDir . '/app/config/views.php',
+    'wapiModel' => $baseDir . '/app/models/wapimodel.php',
 );
