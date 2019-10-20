@@ -15,7 +15,8 @@
 
 <!-- Top Menu -->
     <?php
-        require_once "app/views/pages/partial/topmenu.php";
+        $data = new SiteBuilder();
+        View::partial('topmenu', $data->getMenu());
     ?>
 
 
@@ -26,8 +27,9 @@
 
 
     <?php
-        error_log('page name: '.print_r($page, 1));
-        View::page($page, $data);
+
+    echo "<pre>".print_r($data->getBody(), 1)."</pre>";
+    View::page($page, $data);
     ?>
 
 

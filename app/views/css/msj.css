@@ -19,7 +19,7 @@
 
 body{
     /* min-height:100vh; */
-    background-image: url(../igm/wallPattern_01a.jpeg);
+    background-image: url(../img/wallPattern_01a.jpeg);
     background-size:500px;
     background-attachment: fixed;
     /* box-shadow:20px 20px 50px 10px rgba(0,0,0,5) inset */
@@ -38,13 +38,21 @@ body{
 .nav-link{
 
     color:#fff !important;
-
+    padding-left:10px !important;
+    padding-right:10px !important;
 }
 
-.active{
-
+.nav-link:hover, .active{
     color:rgb(255, 142, 21) !important;
-
+    border-bottom:1px solid rgb(255, 142, 21);
+    margin-bottom:-1px;
+    margin-top:-5px;
+    font-size:12px;
+    padding-left:6px !important;
+    padding-right:6px !important;
+    padding-bottom:2px !important;
+    text-transform: uppercase;
+    font-weight:bold;
 }
 
 .slide-show{
@@ -92,7 +100,7 @@ body{
 .card-image{
     min-height:200px;
     background-color:rgb(30, 30, 30);
-    background-image:url(../igm/wallpainting_02.jpg);
+    background-image:url(../img/wallpainting_02.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size:cover;
@@ -105,7 +113,7 @@ body{
 }
 
 .slide_01{
-    background-image:url(../igm/wallpainting_02.jpg);
+    background-image:url(../img/wallpainting_02.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size:cover;

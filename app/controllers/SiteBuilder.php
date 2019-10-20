@@ -22,12 +22,39 @@ class SiteBuilder
         
     }
 
+    public function getBody(){
+        $this->setMenu();
+        $new_set = array();
+        foreach($this->menu as $key=>$value){
+            if($value['Active']==1){
+                $new_set[$value['MenuOrder']]['id'] = $value['id'];
+                $new_set[$value['MenuOrder']]['Name'] = $value['Name'];
+                $new_set[$value['MenuOrder']]['Type'] = $value['Type'];
+            }
+        }
+                
+        $data = new ContentType($new_set);
+        return $data->index();
+    }
+
+
+
     public function setFooter(){
         
     }
 
     public function getMenu(){
+        $new_set = array();
         $this->setMenu();
-        return $this->menu;
+        foreach($this->menu as $value){
+            if($value['Active']==1){
+                $new_set[$value['MenuOrder']] = $value['Name'];
+            }
+        }
+
+        ksort($new_set);
+        // error_log('ksort: '.print_r($new_set, 1));
+
+        return $new_set;
     }
 }

@@ -6,6 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ContentList' => $baseDir . '/app/config/ContentList.php',
+    'ContentManager' => $baseDir . '/app/controllers/ContentManager.php',
+    'ContentType' => $baseDir . '/app/controllers/ContentType.php',
     'Home' => $baseDir . '/app/controllers/Home.php',
     'Router' => $baseDir . '/app/config/Router.php',
     'SiteBuilder' => $baseDir . '/app/controllers/SiteBuilder.php',

@@ -1,3 +1,4 @@
 ~*
 app/config/
 vendor/
+app/views/content/
