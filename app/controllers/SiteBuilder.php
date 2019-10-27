@@ -32,9 +32,9 @@ class SiteBuilder
                 $new_set[$value['MenuOrder']]['Type'] = $value['Type'];
             }
         }
-                
+
         $data = new ContentType($new_set);
-        return $data->index();
+        // return $data->index();
     }
 
 

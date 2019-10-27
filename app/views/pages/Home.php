@@ -1,10 +1,10 @@
-<div class="container-fluid slide-show-setting">
+<!-- <div class="container-fluid slide-show-setting">
     <div class="row">
     <?php
-    View::partial('carousel', '0');
+    // View::partial('carousel', '0');
     ?>
     </div>
-</div>
+</div> -->
 
 <div class="container-fluid topic-white-list-setting">
     <div class="row">
