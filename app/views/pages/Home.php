@@ -6,13 +6,13 @@
     </div>
 </div> -->
 
-<div class="container-fluid topic-white-list-setting">
+<!-- <div class="container-fluid topic-white-list-setting">
     <div class="row">
     <?php
-    View::partial('topics-grey', '0');
+        // View::partial('topics-grey', '0');
     ?>
     </div>
-</div>
+</div> -->
 
 <div class="container-fluid topic-clear-list-setting">
     <div class="row">

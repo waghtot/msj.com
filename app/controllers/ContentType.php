@@ -8,11 +8,11 @@ class ContentType
             foreach($menu as $key=>$value){
                 if(array_key_exists($key, $this->index())){
                     if(!empty($this->index()[$key])){
-                        $data[] = array('settings'=>$menu[$key], 'params'=>$this->index()[$key]);
+                        $data[] = array('settings'=>$menu[$key], 'params'=>$this->index()[$key], 'style'=>$menu[$key]['Style']);
                     }
                 }
             }
-
+            // error_log('menu: '.print_r($data, 1));
             $this->contentType($data);
             return $data;
         }else{
@@ -40,11 +40,11 @@ class ContentType
         foreach($data as $key=>$value){
             switch($value['settings']['Type']){
                 case 1:
-                    View::partial('carousel', $value['params']);
+                    View::partial('carousel', $value['params']); //switch to whole set and update in carousel 
                 break;
 
                 case 2:
-                echo "topics";
+                    View::partial('topic', $value);
                 break;
 
                 case 3:

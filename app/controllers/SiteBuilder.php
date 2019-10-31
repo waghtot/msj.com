@@ -11,7 +11,6 @@ class SiteBuilder
 
     public function index(){
         $this->setMenu();
-        // return self::setMenu();
     }
 
     public function setMenu(){
@@ -30,6 +29,7 @@ class SiteBuilder
                 $new_set[$value['MenuOrder']]['id'] = $value['id'];
                 $new_set[$value['MenuOrder']]['Name'] = $value['Name'];
                 $new_set[$value['MenuOrder']]['Type'] = $value['Type'];
+                $new_set[$value['MenuOrder']]['Style'] = $value['Style'];
             }
         }
 
@@ -53,7 +53,6 @@ class SiteBuilder
         }
 
         ksort($new_set);
-        // error_log('ksort: '.print_r($new_set, 1));
 
         return $new_set;
     }

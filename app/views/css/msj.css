@@ -57,19 +57,14 @@ body{
 
 .slide-show{
     background-color:#fff;
-    /* min-height:50vh; */
     min-height:500px;
-    /* border-radius: 10px; */
-    /* padding:10px; */
     border:1px solid rgb(148, 82, 11);
     background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.98)  20%, rgba(0,0,0,0.9)  90%);
-    /* background-color: rgba(0,0,0,0.9); */
     box-shadow:0px 10px 15px rgba(10,10,10,0.9);
     padding:10px 10px 5px 10px;
 }
 
 .slide-show-setting, .topic-white-list-setting, .topic-grey-list-setting, .topic-clear-list-setting, .topic-glass-list-setting, .footer-list-setting{
-    /* background-color: rgba(0,0,0, 0.7); */
     padding-top:40px;
     padding-bottom:40px;
 }
@@ -114,7 +109,6 @@ body{
 }
 
 .slide_01{
-    /* background-image:url(../img/wallpainting_02.jpg); */
     background-repeat: no-repeat;
     background-position: center center;
     background-size:cover;
