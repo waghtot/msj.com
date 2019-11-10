@@ -1,6 +1,6 @@
 <div class="card-grey frame-orange">
     <div class="card-header">
-        <h3><?php echo $data['text'][0]; ?></h3>
+        <h3 class="white"><?php echo $data['text'][0]; ?></h3>
     </div>
     <div class="card-image" style="background-image:url(<?php echo $data['image']; ?>);">
         
@@ -8,7 +8,7 @@
     <div>
         <?php
             if(isset($data['text'][1])){
-                echo "<p>";
+                echo "<p class=\"white\">";
                     echo $data['text'][1];
                 echo "</p>";
             }

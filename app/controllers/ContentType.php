@@ -8,12 +8,12 @@ class ContentType
             foreach($menu as $key=>$value){
                 if(array_key_exists($key, $this->index())){
                     if(!empty($this->index()[$key])){
-                        $data[] = array('settings'=>$menu[$key], 'params'=>$this->index()[$key], 'style'=>$menu[$key]['Style']);
+                        $data[] = array('settings'=>$menu[$key], 'params'=>$this->index()[$key]);
                     }
                 }
             }
-            // error_log('menu: '.print_r($data, 1));
-            $this->contentType($data);
+            // error_log('co wysylam: '.print_r($data, 1));
+            $this->contentType($data); //To jest do przeniesienia do content managera
             return $data;
         }else{
             return false;
@@ -36,30 +36,58 @@ class ContentType
         }
     }
 
+    //content manager
     public function contentType($data){
+        $mycontent = array();
         foreach($data as $key=>$value){
-            switch($value['settings']['Type']){
+            switch($value['Type']){
                 case 1:
-                    View::partial('carousel', $value['params']); //switch to whole set and update in carousel 
+                    if(!empty($value['Content'])){
+
+                        $mycontent[] = $this->setContent($value);
+
+                    }
+
                 break;
 
                 case 2:
-                    View::partial('topic', $value);
+                    if(!empty($value['Content'])){
+
+                        $mycontent[] = $this->setContent($value);
+
+                    }                    
                 break;
 
                 case 3:
-                echo "gallery";
+                    if(!empty($value['Content'])){
+
+                        $mycontent[] = $this->setContent($value);
+
+                    }
                 break;
 
                 case 4:
-                echo "form";
+                    if(!empty($value['Content'])){
+
+                        $mycontent[] = $this->setContent($value);
+
+                    }
                 break;
             }
+
         }
+        // error_log('show content: '.print_r($mycontent, 1));
+        return $mycontent;
     }
 
-    public function getTextFormated($text){
-        $ready = explode("\n", file_get_contents($text, FILE_USE_INCLUDE_PATH));        
-        return $ready;
+    public function setContent($array){
+
+        $data = array();
+        $set = new ContentManager($array);
+        $data['Type'] = $array['Type'];
+        $data['Style'] = $array['Style'];
+        $data['content'] = $set->getContent();
+
+        return $data;
     }
 }

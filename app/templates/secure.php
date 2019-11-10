@@ -14,9 +14,28 @@
     <body>
 
 <!-- Top Menu -->
+
     <?php
         $data = new SiteBuilder();
         View::partial('topmenu', $data->getMenu());
+        foreach($data->getBody() as $value){
+            switch($value['Type']){
+                case 1:
+                    View::partial('carousel', $value);
+                break;
+                case 2:
+                    View::partial('topic', $value);
+                break;
+                case 3:
+                    echo "gallery\n<br>\n";
+                break;
+                case 4:
+                    echo "contact";
+                break;
+            }
+        }
+
+
     ?>
 
 
@@ -27,9 +46,7 @@
 
 
     <?php
-
-    echo "<pre>".print_r($data->getBody(), 1)."</pre>";
-    View::page($page, $data);
+        View::page($page, $data->getBody());
     ?>
 
 
