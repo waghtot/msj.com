@@ -12,4 +12,9 @@ $(document).ready(function(){
       autoplaySpeed: 12000,
       pauseOnHover:false,
     });
+
+    var ms = new Date().getTime() + 86400000;
+    var dayup = new Date(ms);
+    $('#from_date').attr("min", dayup.toISOString().slice(0,10));
+    
 });

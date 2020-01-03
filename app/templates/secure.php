@@ -6,14 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="app/views/css/custom.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="app/views/css/custom.min.css"> -->
     <link rel="stylesheet" type="text/css" href="app/views/css/msj.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <script src="http://findmein.dev.uk/app/views/js/sweetalert.min.js"></script>
     </head>
     <body>
 
-<!-- Top Menu -->
+<!-- Layout drawt-->
 
     <?php
         $data = new SiteBuilder();
@@ -34,21 +34,10 @@
                 break;
             }
         }
-
+        View::partial('contact', 0);
+        View::partial('footer', 0);
 
     ?>
-
-
-<!-- End Top Menu -->
-
-<!-- Layout drawt-->
-
-
-
-    <?php
-        View::page($page, $data->getBody());
-    ?>
-
 
 <!-- End Layout -->
 
@@ -74,6 +63,8 @@
                 <?php
                 break;
             }
+
+
         ?>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

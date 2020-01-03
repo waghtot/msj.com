@@ -118,3 +118,7 @@ body{
 .carousel, .slick-slider{
     padding:0px;
 }
+
+.enquiry-form{
+    min-height:250px;
+}

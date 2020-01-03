@@ -10,6 +10,7 @@ return array(
     'ContentManager' => $baseDir . '/app/controllers/ContentManager.php',
     'ContentType' => $baseDir . '/app/controllers/ContentType.php',
     'Home' => $baseDir . '/app/controllers/Home.php',
+    'Login' => $baseDir . '/app/controllers/Login.php',
     'Router' => $baseDir . '/app/config/Router.php',
     'SiteBuilder' => $baseDir . '/app/controllers/SiteBuilder.php',
     'View' => $baseDir . '/app/config/views.php',
