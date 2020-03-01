@@ -24,8 +24,8 @@
 
     <?php
         $data = new SiteBuilder();
-        // $view = new View();
-        // $view->partial('topmenu', $data->getMenu());
+        View::partial('topmenu', $data->getMenu());
+
         foreach($data->getBody() as $value){
             switch($value['Type']){
                 case 1:
