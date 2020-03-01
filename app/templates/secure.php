@@ -49,8 +49,10 @@
                 break;
             }
         }
-        View::partial('contact', 0);
-        View::partial('footer', 0);
+        require_once(PARTIAL.'contact.php');
+        require_once(PARTIAL.'footer.php');
+        // View::partial('contact', 0);
+        // View::partial('footer', 0);
 
     ?>
 
