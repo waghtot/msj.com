@@ -14,6 +14,13 @@
     <body>
 
 <!-- Layout drawt-->
+<?php
+
+    // $data = new SiteBuilder();
+    // View::partial('topmenu', $data->getMenu());
+    // require_once(SECTION.'head.php');
+
+?>
 
     <?php
         $data = new SiteBuilder();
@@ -21,10 +28,18 @@
         foreach($data->getBody() as $value){
             switch($value['Type']){
                 case 1:
-                    View::partial('carousel', $value);
+                    require_once(SECTION.'top.php');
+                    // View::partial('top', 0);
+                    // View::partial('head', 0);
+                    require_once(SECTION.'head.php');
+                    // View::partial('carousel', $value);
                 break;
                 case 2:
-                    View::partial('topic', $value);
+                    require_once(PARTIAL.'interior.php');
+                    require_once(PARTIAL.'exterior.php');
+
+                    // View::partial('topic', $value);
+
                 break;
                 case 3:
                     echo "gallery\n<br>\n";

@@ -1,9 +1,19 @@
 
 /* all about text */
 
+@import url('https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800&display=swap');
+
+
 *{
-    font-size:13px;
+    font-family:"Assistant", sans-serif;
+    font-weight: 300;
+    font-size:18px;
     color:#414141;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family:"Assistant", sans-serif;
+    font-weight: 700;
 }
 
 .dark{
@@ -65,8 +75,8 @@ body{
 }
 
 .slide-show-setting, .topic-white-list-setting, .topic-grey-list-setting, .topic-clear-list-setting, .topic-glass-list-setting, .footer-list-setting{
-    padding-top:40px;
-    padding-bottom:40px;
+    padding-top:80px;
+    padding-bottom:80px;
 }
 
 .topic-white-list-setting{
@@ -85,10 +95,11 @@ body{
     background-color: rgba(0, 0, 0, 0.9);
 }
 
-.footer-list-setting{
+.footer-list-setting, .topic-orange-list-setting{
     background: linear-gradient(0deg, rgb(128, 71, 10) 0%, rgb(206, 114, 17)  100%);
     border-top:1px solid #000;
 }
+
 
 
 /* all about cards */
@@ -121,4 +132,53 @@ body{
 
 .enquiry-form{
     min-height:250px;
+}
+
+.space-down-40{
+    margin-bottom:40px;
+}
+
+.background-clear{
+    /* background-color:#fff; */
+    background-color: rgba(255,255,255,0.8);
+    padding:20px;
+    border-radius:10px;
+    border:1px solid rgb(255, 142, 21);
+}
+
+
+.pattern-top{
+    /* background:url(../img/blue.jpg); */
+    background:url(../img/blue1.jpg);
+    background-repeat: no-repeat;
+    /* background-position: bottom 35% center; */
+    background-position: top 50% center;
+    background-size:cover;
+    border-bottom:3px solid rgb(255, 142, 21);
+}
+
+.contact-back{
+    background: url(../img/ContactUs.svg) no-repeat right bottom;
+    background-size: contain;
+    background-size: 30%;
+}
+
+.exterior-back{
+    /* background: url(../img/adventure-beautiful-boardwalk-bridge-235734.jpg) no-repeat center center; */
+    /* background: url(../img/background-backlight-blur-color-262713.jpg) no-repeat center center; */
+    /* background: url(../img/photography-of-fall-trees-1591447.jpg) no-repeat center center; */
+    /* background: url(../img/pink-flowers-photography-1128797.jpg) no-repeat center center; */
+    /* background: url(../img/adventure-beautiful-boardwalk-bridge-235734.jpg) no-repeat center center; */
+    /* background: url(../img/action-carefree-cropland-daylight-1146242.jpg) no-repeat bottom center; */
+    /* background: url(../img/light-yellow-grass-green-64296.jpg) no-repeat center center; */
+    /* background: url(../img/light-nature-water-summer-94847.jpg) no-repeat center center; */
+    background: url(../img/closeup-photo-of-green-grass-field-1423601.jpg) no-repeat center center;
+    background-size: cover;
+    margin:0px;
+    padding:0px;
+    /* opacity: 0.3; */
+}
+
+.white-back{
+    background: rgba(255, 255, 255, 0.6);
 }
