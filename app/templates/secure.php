@@ -22,68 +22,23 @@
 
 ?>
 
-    <?php
-        $data = new SiteBuilder();
-        View::partial('topmenu', $data->getMenu());
 
-        foreach($data->getBody() as $value){
-            switch($value['Type']){
-                case 1:
-                    require_once(SECTION.'top.php');
-                    // View::partial('top', 0);
-                    // View::partial('head', 0);
-                    require_once(SECTION.'head.php');
-                    // View::partial('carousel', $value);
-                break;
-                case 2:
-                    require_once(PARTIAL.'interior.php');
-                    require_once(PARTIAL.'exterior.php');
 
-                    // View::partial('topic', $value);
 
-                break;
-                case 3:
-                    echo "gallery\n<br>\n";
-                break;
-                case 4:
-                    echo "contact";
-                break;
-            }
-        }
-        require_once(PARTIAL.'contact.php');
-        require_once(PARTIAL.'footer.php');
-        // View::partial('contact', 0);
-        // View::partial('footer', 0);
+<?php
 
-    ?>
+    // require_once(PARTIAL.'topmenu.php');
+    // require_once(SECTION.'top.php');
+    // require_once(SECTION.'head.php');
+    // require_once(PARTIAL.'interior.php');
+    // require_once(PARTIAL.'exterior.php');
+    require_once(PARTIAL.'contact.php');
+    // require_once(PARTIAL.'footer.php');
+
+?>
+
 
 <!-- End Layout -->
-
-
-        <?php
-
-            if(!isset($_GET['params'])){
-                $index ='';
-            }else{
-                $index = $_GET['params'];
-            }
-            switch($index){
-                case '':
-                case 'home':
-                ?>
-
-                <?php
-                break;
-
-                default:
-                ?>
-
-                <?php
-                break;
-            }
-
-
-        ?>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

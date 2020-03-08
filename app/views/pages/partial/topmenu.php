@@ -9,14 +9,26 @@
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="#home">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#interior">INTERIOR</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#exterior">EXTERIOR</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact_us">CONTACT US</a>
+            </li>
                 <?php
-                    $m=0;
-                    foreach($data as $value){
-                        echo "\t\t\t\t<li class=\"nav-item\">\n";
-                            echo "\t\t\t\t\t<a class=\"nav-link\" id=\"m_".$m."\" href=\"#".str_replace(" ", "_", $value)."\">".ucwords($value)."</a>\n";
-                        echo "\t\t\t\t</li>\n";
-                        $m++;
-                    }
+                    // $m=0;
+                    // foreach($data as $value){
+                    //     echo "\t\t\t\t<li class=\"nav-item\">\n";
+                    //         echo "\t\t\t\t\t<a class=\"nav-link\" id=\"m_".$m."\" href=\"#".str_replace(" ", "_", $value)."\">".ucwords($value)."</a>\n";
+                    //     echo "\t\t\t\t</li>\n";
+                    //     $m++;
+                    // }
                 ?>
             </ul>
         </div>

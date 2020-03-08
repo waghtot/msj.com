@@ -8,5 +8,5 @@
     <div class="form-group">
         <textarea class="form-control enquiry-form" id="u_query" placeholder="Enquiry" name="query" required></textarea>
     </div>
-    <button type="button" id="send" class="btn btn-md btn-secondary btn-main btn-right">Send</button>
+    <button type="button" id="u_send" class="btn btn-md btn-secondary btn-main btn-right">Send</button>
 </form>
