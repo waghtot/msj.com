@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Contact' => $baseDir . '/app/controllers/Contact.php',
     'ContentList' => $baseDir . '/app/config/ContentList.php',
     'ContentManager' => $baseDir . '/app/controllers/ContentManager.php',
     'ContentType' => $baseDir . '/app/controllers/ContentType.php',

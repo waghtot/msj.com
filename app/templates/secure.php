@@ -10,46 +10,37 @@
     <link rel="stylesheet" type="text/css" href="app/views/css/msj.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <script src="http://findmein.dev.uk/app/views/js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
     </head>
     <body>
 
 <!-- Layout drawt-->
-<?php
-
-    // $data = new SiteBuilder();
-    // View::partial('topmenu', $data->getMenu());
-    // require_once(SECTION.'head.php');
-
-?>
-
     <?php
         $data = new SiteBuilder();
         View::partial('topmenu', $data->getMenu());
         foreach($data->getBody() as $value){
             switch($value['Type']){
                 case 1:
-                    require_once(SECTION.'top.php');
-                    // View::partial('top', 0);
-                    // View::partial('head', 0);
-                    require_once(SECTION.'head.php');
-                    // View::partial('carousel', $value);
+                    View::partial('top', 0);
+                    View::partial('head', 0);
                 break;
                 case 2:
-                    require_once(PARTIAL.'interior.php');
-                    require_once(PARTIAL.'exterior.php');
-
-                    // View::partial('topic', $value);
-
+                    View::partial('topic', $value);
                 break;
                 case 3:
-                    echo "gallery\n<br>\n";
+
                 break;
                 case 4:
-                    echo "contact";
+                    View::partial('contact', 0);
+                break;
+                case 5:
+                    // error_log('type five');
                 break;
             }
         }
-        View::partial('contact', 0);
+
         View::partial('footer', 0);
 
     ?>
@@ -82,12 +73,13 @@
 
         ?>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="app/views/js/slick/slick/slick.js"></script>
-    <script src="app/views/js/home/home.js"></script>
+    <script src="app/views/js/home/home.js?v=<?php echo microtime(); ?>"></script>
 
     </body>
 </html>

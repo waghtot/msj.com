@@ -76,7 +76,7 @@ class ContentType
             }
 
         }
-        // error_log('show content: '.print_r($mycontent, 1));
+
         return $mycontent;
     }
 

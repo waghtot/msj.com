@@ -13,6 +13,6 @@
                 echo "</p>";
             }
         ?>
-        <button class="btn btn-md btn btn-dark float-right" id="view-more">view more</button>
+        <!-- <button class="btn btn-md btn btn-dark float-right" id="view-more">view more</button> -->
     </div>
 </div>

@@ -1,4 +1,5 @@
 <?php
+
 class Home {
 
     public function __construct(){
@@ -15,8 +16,7 @@ class Home {
           $a = array_combine($csv[0], $a);
         });
         array_shift($csv); # remove column header
-
-        error_log('array from csv file: '.print_r($csv, 1));
+        // error_log('array from csv file: '.print_r($csv, 1));
         $data = array();
         return new View(get_called_class(), $data);
     }
@@ -25,4 +25,5 @@ class Home {
         $data = new Login();
         return $data->index();
     }
+
 }

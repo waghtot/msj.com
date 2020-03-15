@@ -40,6 +40,7 @@ class SiteBuilder
         $new_set = array();
         foreach($this->menu as $key=>$value){
             if($value['Active']==1){
+                $new_set[$value['MenuOrder']]['BodyOrder'] = $value['BodyOrder'];
                 $new_set[$value['MenuOrder']]['id'] = $value['id'];
                 $new_set[$value['MenuOrder']]['Name'] = $value['Name'];
                 $new_set[$value['MenuOrder']]['Type'] = $value['Type'];
@@ -47,6 +48,13 @@ class SiteBuilder
                 $new_set[$value['MenuOrder']]['Content'] = $structure[$value['id']];
             }
         }
+
+
+        // array_multisort($new_set, "BodyOrder", SORT_ASC);
+
+        array_multisort(array_column($new_set, 'BodyOrder'), SORT_ASC, $new_set);
+
+        // error_log('newset: '.print_r($new_set['MenuOrder'], 1));
 
         $data = new ContentType();
         $data->contentType($new_set);
