@@ -8,7 +8,9 @@ if(isset($_POST)){
     $headers = 'From: ' . $_POST['uemail'] . "\r\n" .
         'Reply-To: '. $_POST['uemail']  . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
-    
+
+        echo json_encode($to);
+
     mail($to, $subject, $message, $headers);
 
     $res = array();
