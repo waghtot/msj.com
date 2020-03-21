@@ -116,9 +116,9 @@ $(document).ready(function(){
           "uquery":$('#fquery').val(),
         }
 
-        console.log('klikles i co teraz?');
+        // console.log('klikles i co teraz?');
 
-        if(cf.formvalidate() !== false){
+        if(cf.formvalidate() == true){
           cf.sendemail(query);
         }
       });
