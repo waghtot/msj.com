@@ -36,19 +36,9 @@ $(document).ready(function(){
   var bf = {
 
     initiate: function(){
-
-
-
-
-
-
-
-
-
       
       $('#b_book').on('click', function(){
 
-        if($('#b_date') < )
         var book = {
           "fullname":$('#b_name').val(),
           "email":$('#b_email').val(),
