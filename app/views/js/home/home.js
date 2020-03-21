@@ -115,9 +115,7 @@ $(document).ready(function(){
           "uphone":$('#fphone').val(),
           "uquery":$('#fquery').val(),
         }
-
-        // console.log('klikles i co teraz?');
-
+        
         if(cf.formvalidate() == true){
           cf.sendemail(query);
         }
