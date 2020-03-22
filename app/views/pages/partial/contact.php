@@ -5,9 +5,6 @@
                 <div>
                     <h1 >Contact Us</h1>
                 </div>
-                <div>
-                    <p  >Section short description</p>
-                </div>
             </div>
         </div>
 
