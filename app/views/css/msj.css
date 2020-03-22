@@ -75,8 +75,8 @@ body{
 }
 
 .slide-show-setting, .topic-white-list-setting, .topic-grey-list-setting, .topic-clear-list-setting, .topic-glass-list-setting, .footer-list-setting{
-    padding-top:80px;
-    padding-bottom:80px;
+    padding-top:80px !important;
+    padding-bottom:80px !important;
 }
 
 .topic-white-list-setting{
@@ -97,10 +97,17 @@ body{
 
 .footer-list-setting, .topic-orange-list-setting{
     background: linear-gradient(0deg, rgb(128, 71, 10) 0%, rgb(206, 114, 17)  100%);
-    border-top:1px solid #000;
+    padding:25px 0px 0px 0px;
 }
 
+.text-footer, .header-footer{
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
 
+.text-footer{
+    font-size:14px;
+    line-height:17px;
+}
 
 /* all about cards */
 .card-image{
@@ -172,7 +179,7 @@ body{
     /* background: url(../img/action-carefree-cropland-daylight-1146242.jpg) no-repeat bottom center; */
     /* background: url(../img/light-yellow-grass-green-64296.jpg) no-repeat center center; */
     /* background: url(../img/light-nature-water-summer-94847.jpg) no-repeat center center; */
-    background: url(../img/closeup-photo-of-green-grass-field-1423601.jpg) no-repeat center center;
+    /* background: url(../img/closeup-photo-of-green-grass-field-1423601.jpg) no-repeat center center; */
     background-size: cover;
     margin:0px;
     padding:0px;

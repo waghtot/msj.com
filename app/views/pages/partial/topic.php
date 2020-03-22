@@ -1,4 +1,15 @@
-<div class="container-fluid topic-<?php echo $data['Style']['topic']; ?>-list-setting">
+<?php
+    if(isset($data['Style']['background']) && trim($data['Style']['background'] !='')){
+        $addclass = "exterior-back";
+        $style = "style=\"background:url(app/views/img/".$data['Style']['background']."); background-size: cover; background-position: bottom center;\""; 
+    }else{
+        $addclass = '';
+        $style = '';
+    }
+?>
+
+
+<div class="container-fluid <?php echo $addclass; ?> topic-<?php echo $data['Style']['topic']; ?>-list-setting" <?php echo $style; ?>>
     <div class="row">
         <div class="container">
             <div class="row">
