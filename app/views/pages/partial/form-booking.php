@@ -32,5 +32,5 @@
         </div>
     </div>
 </div>
-    <button type="button" id="b_book" class="btn btn-md btn-secondary btn-right">Book Now</button>
+    <button type="button" id="b_book" class="btn btn-md btn-secondary btn-right" disabled>Book Now</button>
 </form>
