@@ -9,7 +9,7 @@ if(isset($_POST)){
         'Reply-To: '. $_POST['uemail']  . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
 
-    mail($to, $subject, $message, $headers);
+ //   mail($to, $subject, $message, $headers);
 
     $res = array();
     $res['code'] = '200';
