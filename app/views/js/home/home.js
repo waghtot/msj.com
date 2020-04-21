@@ -25,6 +25,7 @@ $(document).ready(function(){
       var ms = new Date().getTime() + 86400000;
       var dayup = new Date(ms);
       $('#b_date').attr("value", dayup.toISOString().slice(0,10));
+      $('#b_date').attr('min', dayup.toISOString().slice(0,10));
     }
 
 
@@ -36,9 +37,7 @@ $(document).ready(function(){
   var bf = {
 
     initiate: function(){
-      
       $('#b_book').on('click', function(){
-
         var book = {
           "fullname":$('#b_name').val(),
           "email":$('#b_email').val(),
@@ -48,25 +47,22 @@ $(document).ready(function(){
           "postcode":$('#b_post').val(),
         }
 
-        console.log(book);
-        console.log(bf.fvalidate());
-
-        if(bf.fvalidate() !== false){
+        if(bf.fvalidate(book) !== false){
           bf.sendemail(book);
         }
       });
     },
 
     sendemail: function(book){
-
       console.log(book);
-
       $.ajax ({
         type: "post",
         dataType: 'json',
         url: "/app/controllers/Booking.php",
         data: book
       }).done(function(res){
+
+        console.log(res); 
         if(res.code == 200){
           bf.clearform();
           swal('Success', 'Your message has been sent successfully', 'success');
@@ -74,29 +70,41 @@ $(document).ready(function(){
       });
     },
 
-    fvalidate: function(){
-      var isValid = $('#booking').validate({
-        rules:{
-          fullname:{
-            required: true
-          }
-          // ,
-          // email:{
-          //   required:true,
-          //   email:true
-          // },
-          // phone:{
-          //   required:true
-          // },
-          // date:{
-          //   required:true
-          // },
-          // postcode:{
-          //   required:true
-          // }
-        }
-      });
-      return isValid.form();
+    fvalidate: function(e){
+
+      var validation = false;
+
+      if(e.fullname !=''){
+        validation = true;
+      }else{
+        return false;
+      }
+
+      if((e.email.length != 0 &&  bf.validateEmail(e.email)!==false) || (e.phone!='' && e.phone.length >= 10)){
+        validation = true;
+      }else{
+        return false;
+      }
+      
+      if(e.postcode.length > 0 && e.postcode.length > 3 ){
+        validation = true;
+      }else
+      {
+        return false;
+      }
+
+      return true;
+    },
+
+    validateEmail:function(e){
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(e.match(mailformat))
+      {
+        console.log('email validation: pass');
+        return true;
+      }else{
+        return false;
+      }
     },
 
     clearform: function(){

@@ -1,8 +1,7 @@
 <?php
 
 if(isset($_POST)){
-    // $to      = 'info.msjconst@gmail.com';
-    $to      = 'waghtot@gmail.com';
+    $to      = 'info.msjconst@gmail.com';
     $subject = 'Customer Enquiry';
     $message = $_POST['uquery'];
     $headers = 'From: ' . $_POST['uemail'] . "\r\n" .
@@ -17,5 +16,4 @@ if(isset($_POST)){
 
     echo json_encode($res);
     die;
-
 }
