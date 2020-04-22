@@ -63,9 +63,11 @@ $(document).ready(function(){
       }).done(function(res){
 
         console.log(res); 
-        if(res.code == 200){
-          bf.clearform();
-          swal('Success', 'Your message has been sent successfully', 'success');
+        if(res.code == 6000){
+
+          swal('Success', 'Your message has been sent successfully', 'success').then(function(){
+            bf.clearform();
+          });
         }
       });
     },
@@ -108,7 +110,7 @@ $(document).ready(function(){
     },
 
     clearform: function(){
-      $('#Booking')[0].reset();
+      window.location='./';
     }
     
   }

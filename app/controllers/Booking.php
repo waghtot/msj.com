@@ -14,15 +14,16 @@ if(isset($_POST)){
         $data->code = 6006;
         $data->message = 'We are sorry but we are not providing our services in that area';
     }
-
+    error_log('response to frontend: '.print_r($data, 1));
     echo json_encode($data);
     die;
 }
 
-function sendEmail($data){
+function sendEmail(){
 
     if(isset($_POST)){
-        $to      = 'info.msjconst@gmail.com';
+        // $to      = 'info.msjconst@gmail.com';
+        $to      = 'waghtot@gmail.com';
         $subject = 'Customer Enquiry';
         $message = getMessage();
         if(isset($_POST['email']) && strlen($_POST['email'])>0)
@@ -39,7 +40,7 @@ function sendEmail($data){
         mail($to, $subject, $message, $headers);
     
         $res = array();
-        $res['code'] = '200';
+        $res['code'] = '6000';
         $res['message'] = 'Success';
     
         echo json_encode($res);
