@@ -22,8 +22,8 @@ if(isset($_POST)){
 function sendEmail(){
 
     if(isset($_POST)){
-        // $to      = 'info.msjconst@gmail.com';
-        $to      = 'waghtot@gmail.com';
+        $to      = 'info.msjconst@gmail.com';
+        // $to      = 'waghtot@gmail.com';
         $subject = 'Customer Enquiry';
         $message = getMessage();
         if(isset($_POST['email']) && strlen($_POST['email'])>0)
