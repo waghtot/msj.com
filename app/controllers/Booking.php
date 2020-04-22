@@ -73,23 +73,23 @@ function getMessage(){
 
     if(isset($_POST['email']) && strlen($_POST['email']))
     {
-        $message.= 'Email: '.$_POST['email'].'\n\r';
+        $message.= 'Email: '.$_POST['email'].' ';
     }
     if(isset($_POST['phone']) && strlen($_POST['phone']))
     {
-        $message.= 'Phone: '.$_POST['phone'].'\n\r';
+        $message.= 'Phone: '.$_POST['phone'].' ';
     }
     if(isset($_POST['day']) && strlen($_POST['day']))
     {
-        $message.= 'Date: '.$_POST['day'].'\n\r';
+        $message.= 'Date: '.$_POST['day'].' ';
     }
     if(isset($_POST['hour']) && strlen($_POST['hour']))
     {
-        $message.= 'Time: '.$_POST['hour'].'\n\r';
+        $message.= 'Time: '.$_POST['hour'].' ';
     }
     if(isset($_POST['postcode']) && strlen($_POST['postcode']))
     {
-        $message.= 'Postcode: '.$_POST['postcode'].'\n\r';
+        $message.= 'Postcode: '.$_POST['postcode'].' ';
     }
     return $message;
 }
