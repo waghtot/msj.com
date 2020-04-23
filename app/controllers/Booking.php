@@ -14,7 +14,6 @@ if(isset($_POST)){
         $data->code = 6006;
         $data->message = 'We are sorry but we are not providing our services in that area';
     }
-    error_log('response to frontend: '.print_r($data, 1));
     echo json_encode($data);
     die;
 }
