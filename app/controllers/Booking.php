@@ -3,7 +3,7 @@
 if(isset($_POST)){
     $data = new stdClass();
     $data = $_POST;
-    error_log('show me post object: '.print_r($_POST, 1));
+
     if(postCodeLookUp() !== false){
         $data = new stdClass();
         $data->code = 6000;
@@ -14,7 +14,6 @@ if(isset($_POST)){
         $data->code = 6006;
         $data->message = 'We are sorry but we are not providing our services in that area';
     }
-    error_log('response to frontend: '.print_r($data, 1));
     echo json_encode($data);
     die;
 }
@@ -22,8 +21,8 @@ if(isset($_POST)){
 function sendEmail(){
 
     if(isset($_POST)){
-        // $to      = 'info.msjconst@gmail.com';
-        $to      = 'waghtot@gmail.com';
+        $to      = 'info.msjconst@gmail.com';
+        // $to      = 'waghtot@gmail.com';
         $subject = 'Customer Enquiry';
         $message = getMessage();
         if(isset($_POST['email']) && strlen($_POST['email'])>0)
@@ -57,7 +56,6 @@ function postCodeLookUp(){
     $conv = array();
     $conv = $post->postcode;
     foreach($post->postcode as $value){
-        error_log('postcode list: '.$value);
         if(has_prefix($_POST['postcode'], $value) == 1){
             return true;
         }
@@ -74,25 +72,24 @@ function getMessage(){
 
     if(isset($_POST['email']) && strlen($_POST['email']))
     {
-        $message.= 'Email: '.$_POST['email'].'\n\r';
+        $message.= 'Email: '.$_POST['email'].' ';
     }
     if(isset($_POST['phone']) && strlen($_POST['phone']))
     {
-        $message.= 'Phone: '.$_POST['phone'].'\n\r';
+        $message.= 'Phone: '.$_POST['phone'].' ';
     }
     if(isset($_POST['day']) && strlen($_POST['day']))
     {
-        $message.= 'Date: '.$_POST['day'].'\n\r';
+        $message.= 'Date: '.$_POST['day'].' ';
     }
     if(isset($_POST['hour']) && strlen($_POST['hour']))
     {
-        $message.= 'Time: '.$_POST['hour'].'\n\r';
+        $message.= 'Time: '.$_POST['hour'].' ';
     }
     if(isset($_POST['postcode']) && strlen($_POST['postcode']))
     {
-        $message.= 'Postcode: '.$_POST['postcode'].'\n\r';
+        $message.= 'Postcode: '.$_POST['postcode'].' ';
     }
-    error_log('your message: '.print_r($message, 1));
     return $message;
 }
 ?>
