@@ -9,7 +9,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="app/views/css/custom.min.css"> -->
     <link rel="stylesheet" type="text/css" href="app/views/css/msj.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <script src="http://findmein.dev.uk/app/views/js/sweetalert.min.js"></script>
+    <script src="app/views/js/sweetalert.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 

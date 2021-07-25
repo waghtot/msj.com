@@ -3,7 +3,7 @@
 if(isset($_POST)){
     $data = new stdClass();
     $data = $_POST;
-
+    error_log('show me post object: '.print_r($_POST, 1));
     if(postCodeLookUp() !== false){
         $data = new stdClass();
         $data->code = 6000;
@@ -57,6 +57,7 @@ function postCodeLookUp(){
     $conv = array();
     $conv = $post->postcode;
     foreach($post->postcode as $value){
+        error_log('postcode list: '.$value);
         if(has_prefix($_POST['postcode'], $value) == 1){
             return true;
         }
@@ -91,6 +92,7 @@ function getMessage(){
     {
         $message.= 'Postcode: '.$_POST['postcode'].'\n\r';
     }
+    error_log('your message: '.print_r($message, 1));
     return $message;
 }
 ?>

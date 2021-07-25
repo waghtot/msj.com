@@ -64,8 +64,11 @@ $(document).ready(function(){
 
         console.log(res); 
         if(res.code == 6000){
-
           swal('Success', 'Your message has been sent successfully', 'success').then(function(){
+            bf.clearform();
+          });
+        }else{
+          swal('info', 'We are not providing any services in that area', 'info').then(function(){
             bf.clearform();
           });
         }
