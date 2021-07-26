@@ -46,10 +46,16 @@ body{
 }
 
 .nav-link{
-
-    color:#fff !important;
-    padding-left:10px !important;
-    padding-right:10px !important;
+    color:rgb(255, 255, 255) !important;
+    border-bottom:1px solid rgba(255, 142, 21, 0);
+    /* margin-bottom:-1px;
+    margin-top:-5px;
+    font-size:14px;*/
+    padding-left:6px !important;
+    padding-right:6px !important;
+    padding-bottom:2px !important;
+    text-transform: uppercase;
+    font-weight:300;
 }
 
 .nav-link:hover, .active{
@@ -57,12 +63,12 @@ body{
     border-bottom:1px solid rgb(255, 142, 21);
     margin-bottom:-1px;
     margin-top:-5px;
-    font-size:12px;
+    /* font-size:15px; */
     padding-left:6px !important;
     padding-right:6px !important;
     padding-bottom:2px !important;
     text-transform: uppercase;
-    font-weight:bold;
+    font-weight:300;
 }
 
 .slide-show{
@@ -188,4 +194,20 @@ body{
 
 .white-back{
     background: rgba(255, 255, 255, 0.6);
+}
+
+.logo-left{
+    color:rgb(255, 142, 21);
+    font-weight:900;
+    font-size: 150%;
+}
+
+.logo-middle{
+    color:rgb(255, 225, 225);
+    font-weight:300;
+    font-size: larger;
+}
+
+.logo-right{
+    color:rgb(255, 225, 225);
 }

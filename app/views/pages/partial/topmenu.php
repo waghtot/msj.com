@@ -1,7 +1,7 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
     <div class="container">
 
-        <a class="navbar-brand" href="./">MSJ|Construction Ltd.</a>
+        <a class="navbar-brand" href="./"><span class="logo-left">MSJ</span><span class="logo-middle">|</span><span class="logo-right">Construction Ltd.</span></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

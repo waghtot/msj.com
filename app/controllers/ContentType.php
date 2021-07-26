@@ -32,6 +32,7 @@ class ContentType
         }
 
         if(!empty($structure)){
+            error_log('show structure: '.print_r($structure, 1));
             return $structure;
         }
     }

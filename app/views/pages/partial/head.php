@@ -1,4 +1,4 @@
-<div class="container-fluid topic-white-list-setting">
+<div class="container-fluid topic-white-list-setting" id="<?php echo $data['Style']['Name'];?>">
     <div class="row">
         <div class="container min-top">
             <div class="row">
