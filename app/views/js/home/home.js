@@ -27,15 +27,9 @@ $(document).ready(function(){
       $('#b_date').attr("value", dayup.toISOString().slice(0,10));
       $('#b_date').attr('min', dayup.toISOString().slice(0,10));
     }
-
-
   }
 
-
-
-
   var bf = {
-
     initiate: function(){
       $('#b_book').on('click', function(){
         var book = {
@@ -46,25 +40,23 @@ $(document).ready(function(){
           "hour":$('#b_time').val(),
           "postcode":$('#b_post').val(),
         }
-
+        console.log('object with booking data' + book);
         if(bf.fvalidate(book) !== false){
+          console.log('object with booking data' + book);
           bf.sendemail(book);
         }
       });
     },
 
     sendemail: function(book){
-      console.log(book);
       $.ajax ({
         type: "post",
         dataType: 'json',
         url: "/app/controllers/Booking.php",
         data: book
       }).done(function(res){
-
         console.log(res); 
         if(res.code == 6000){
-
           swal('Success', 'Your message has been sent successfully', 'success').then(function(){
             bf.clearform();
           });
@@ -92,7 +84,7 @@ $(document).ready(function(){
         return false;
       }
       
-      if(e.postcode.length > 0 && e.postcode.length > 3 ){
+      if(e.postcode.length > 0 && e.postcode.length >= 3 ){
         validation = true;
       }else
       {
