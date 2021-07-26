@@ -36,7 +36,7 @@
                     View::partial('contact', 0);
                 break;
                 case 5:
-                    // error_log('type five');
+
                 break;
             }
         }

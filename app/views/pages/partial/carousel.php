@@ -1,7 +1,3 @@
-<?php
-  // error_log('carousel slides: '.print_r($data['content'], 1));
-?>
-
 <div class="container-fluid slide-show-setting">
   <div class="row">
     <div class="container slide-show">
