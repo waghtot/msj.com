@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+  var min = '1800';
+  var max = '2200';
+
   var tm = {
 
     initiate: function(){
@@ -67,25 +70,22 @@ $(document).ready(function(){
 
     fvalidate: function(e){
 
-      var validation = false;
+      if(e.hour.replace(':', '') < min || e.hour.replace(':', '') > max){
+        swal('warning', 'Available time: 18:00 - 22:00', 'warning');
+            return false;
+      }
 
-      if(e.fullname !=''){
-        validation = true;
-      }else{
+      if(e.fullname.lenght = 0){
         return false;
       }
 
-      if((e.email.length != 0 &&  bf.validateEmail(e.email)!==false) || (e.phone!='' && e.phone.length >= 10)){
-        validation = true;
-      }else{
+      if((bf.validateEmail(e.email)!==true) || (e.phone!='' && e.phone.length < 10)){
         return false;
       }
       
-      if(e.postcode.length > 0 && e.postcode.length >= 3 ){
-        validation = true;
-      }else
-      {
-        return false;
+      if(e.postcode.length < 2 ){
+        swal('warning', 'PostCode is required', 'warning');
+            return false;
       }
 
       return true;
