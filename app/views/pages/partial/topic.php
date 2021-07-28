@@ -9,9 +9,9 @@
 ?>
 
 
-<div class="container-fluid <?php echo $addclass; ?> topic-<?php echo $data['Style']['topic']; ?>-list-setting" <?php echo $style; ?>>
+<div class="container-fluid <?php echo $addclass; ?> topic-<?php echo $data['Style']['topic']; ?>-list-setting" <?php echo $style; ?> id="<?php echo $data['Style']['Name'];?>">
     <div class="row">
-        <div class="container">
+        <div class="container" >
             <div class="row">
                 <div class="col-12">
                     <div>

@@ -49,12 +49,7 @@ class SiteBuilder
             }
         }
 
-
-        // array_multisort($new_set, "BodyOrder", SORT_ASC);
-
         array_multisort(array_column($new_set, 'BodyOrder'), SORT_ASC, $new_set);
-
-        // error_log('newset: '.print_r($new_set['MenuOrder'], 1));
 
         $data = new ContentType();
         $data->contentType($new_set);

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- <link rel="stylesheet" type="text/css" href="app/views/css/custom.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="app/views/css/msj.css">
+    <link rel="stylesheet" type="text/css" href="app/views/css/msj.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <script src="app/views/js/sweetalert.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -36,7 +36,7 @@
                     View::partial('contact', 0);
                 break;
                 case 5:
-                    // error_log('type five');
+
                 break;
             }
         }

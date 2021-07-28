@@ -3,7 +3,7 @@
         <input type="email" class="form-control" id="femail"  placeholder="Email" name="email">
     </div>
     <div class="form-group">
-        <input type="text" class="form-control" id="fphone"  placeholder="Phone" name="phone">
+        <input type="text" class="form-control" id="fphone"  placeholder="Phone" name="phone" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
     </div>
     <div class="form-group">
         <textarea class="form-control enquiry-form" id="fquery" placeholder="Enquiry" name="query"></textarea>

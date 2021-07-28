@@ -40,9 +40,7 @@ $(document).ready(function(){
           "hour":$('#b_time').val(),
           "postcode":$('#b_post').val(),
         }
-        console.log('object with booking data' + book);
         if(bf.fvalidate(book) !== false){
-          console.log('object with booking data' + book);
           bf.sendemail(book);
         }
       });
@@ -55,7 +53,6 @@ $(document).ready(function(){
         url: "/app/controllers/Booking.php",
         data: book
       }).done(function(res){
-        console.log(res); 
         if(res.code == 6000){
           swal('Success', 'Your message has been sent successfully', 'success').then(function(){
             bf.clearform();
@@ -98,7 +95,6 @@ $(document).ready(function(){
       var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       if(e.match(mailformat))
       {
-        console.log('email validation: pass');
         return true;
       }else{
         return false;
