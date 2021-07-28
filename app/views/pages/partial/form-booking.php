@@ -24,7 +24,7 @@
         </div>
         <div class="col-4">
         <label for="time" class="lead">Time</label>
-            <input type="time" class="form-control postcode" id="b_time" name="hour" value="18:30">
+            <input type="time" class="form-control postcode" id="b_time" name="hour" min='18:00:00' max='22:00:00' value="18:30">
         </div>
         <div class="col-4">
             <label for="time" class="lead">Location</label>
