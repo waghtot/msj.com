@@ -70,9 +70,6 @@ $(document).ready(function(){
 
     fvalidate: function(e){
 
-      var validation = false;
-
-      console.log(e.hour);
       if(e.hour.replace(':', '') < min || e.hour.replace(':', '') > max){
         swal('warning', 'Available time: 18:00 - 22:00', 'warning');
             return false;
