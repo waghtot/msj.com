@@ -35,6 +35,7 @@ $(document).ready(function(){
   var bf = {
     initiate: function(){
       $('#b_book').on('click', function(){
+        
         var book = {
           "fullname":$('#b_name').val(),
           "email":$('#b_email').val(),
@@ -43,6 +44,7 @@ $(document).ready(function(){
           "hour":$('#b_time').val(),
           "postcode":$('#b_post').val(),
         }
+
         if(bf.fvalidate(book) !== false){
           bf.sendemail(book);
         }
@@ -75,11 +77,13 @@ $(document).ready(function(){
             return false;
       }
 
-      if(e.fullname.lenght = 0){
+      if(!e.fullname || e.fullname.lenght < 1){
+        swal('warning', 'Full Name is required', 'warning');
         return false;
       }
 
       if((bf.validateEmail(e.email)!==true) || (e.phone!='' && e.phone.length < 10)){
+        swal('warning', 'Email addres or phone number are incorrect', 'warning');
         return false;
       }
       
