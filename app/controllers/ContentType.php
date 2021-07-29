@@ -12,7 +12,7 @@ class ContentType
                     }
                 }
             }
-            // error_log('co wysylam: '.print_r($data, 1));
+
             $this->contentType($data); //To jest do przeniesienia do content managera
             return $data;
         }else{

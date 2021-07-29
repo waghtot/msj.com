@@ -52,7 +52,7 @@ class ContentManager
                 }
             }
             if(!empty($data)){
-                // error_log('content: '.print_r($data, 1));
+
                 return $data;
             }
         }

@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+  var min = '1800';
+  var max = '2200';
+
   var tm = {
 
     initiate: function(){
@@ -27,15 +30,9 @@ $(document).ready(function(){
       $('#b_date').attr("value", dayup.toISOString().slice(0,10));
       $('#b_date').attr('min', dayup.toISOString().slice(0,10));
     }
-
-
   }
 
-
-
-
   var bf = {
-
     initiate: function(){
       $('#b_book').on('click', function(){
         var book = {
@@ -46,7 +43,6 @@ $(document).ready(function(){
           "hour":$('#b_time').val(),
           "postcode":$('#b_post').val(),
         }
-
         if(bf.fvalidate(book) !== false){
           bf.sendemail(book);
         }
@@ -54,17 +50,13 @@ $(document).ready(function(){
     },
 
     sendemail: function(book){
-      console.log(book);
       $.ajax ({
         type: "post",
         dataType: 'json',
         url: "/app/controllers/Booking.php",
         data: book
       }).done(function(res){
-
-        console.log(res); 
         if(res.code == 6000){
-
           swal('Success', 'Your message has been sent successfully', 'success').then(function(){
             bf.clearform();
           });
@@ -78,25 +70,22 @@ $(document).ready(function(){
 
     fvalidate: function(e){
 
-      var validation = false;
+      if(e.hour.replace(':', '') < min || e.hour.replace(':', '') > max){
+        swal('warning', 'Available time: 18:00 - 22:00', 'warning');
+            return false;
+      }
 
-      if(e.fullname !=''){
-        validation = true;
-      }else{
+      if(e.fullname.lenght = 0){
         return false;
       }
 
-      if((e.email.length != 0 &&  bf.validateEmail(e.email)!==false) || (e.phone!='' && e.phone.length >= 10)){
-        validation = true;
-      }else{
+      if((bf.validateEmail(e.email)!==true) || (e.phone!='' && e.phone.length < 10)){
         return false;
       }
       
-      if(e.postcode.length > 0 && e.postcode.length > 3 ){
-        validation = true;
-      }else
-      {
-        return false;
+      if(e.postcode.length < 2 ){
+        swal('warning', 'PostCode is required', 'warning');
+            return false;
       }
 
       return true;
@@ -106,7 +95,6 @@ $(document).ready(function(){
       var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       if(e.match(mailformat))
       {
-        console.log('email validation: pass');
         return true;
       }else{
         return false;

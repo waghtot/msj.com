@@ -1,8 +1,6 @@
 <div class="container-fluid exterior-back">
     <div class="container-fluid topic-white-list-setting white-back">
-    <!-- <div class="container-fluid topic-white-list-setting exterior-back"> -->
-        <!-- <div class="container background-clear"> -->
-        <div class="container">
+        <div class="container" id="Exterior">
             <div class="row">
                 <div class="col-12">
                     <div>
