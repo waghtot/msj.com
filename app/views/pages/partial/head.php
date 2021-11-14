@@ -17,7 +17,7 @@
                 <div class="col-9">
                     <div>
                         <p>
-                            Welcome to our Web page.
+                            <h2>Welcome to our Web page.</h2>
                         </p>
                         <p>
                             MSJ Construction Ltd is a well established company working within London and surrounding areas having completed many successful projects.
