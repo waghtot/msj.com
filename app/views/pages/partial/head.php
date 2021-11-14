@@ -17,13 +17,27 @@
                 <div class="col-9">
                     <div>
                         <p>
-                            Welcome to our wee page. We offer construction, refurbishment, engineering and joinery services across a wide range of sectors.
+                            Welcome to our Web page.
                         </p>
                         <p>
-                            With over 17 years of experience on UK market, our portfolio spans from challenging bespoke developments to large refurbishment and new-build contracts. Our dedicated team has the knowledge and experience needed to ensure a smooth and successful completion of a project.
+                            MSJ Construction Ltd is a well established company working within London and surrounding areas having completed many successful projects.
                         </p>
                         <p>
-                            MSJ Construction Ltd. is a well-established company working in London and the surrounding area. Having completed many successful projects, we have the experience and the expertise needed to realise the construction or renovation project of your dreams! We're a general contractor, and we work closely with projects' owners to ensure their wishes are taken into account. We can also advise on alternative solutions that could be less costly and take less time to complete without compromising quality.
+                            With over 20 years of experience within the UK market our portfolio spans from challenging bespoke developments to large refurbishments and also new build contracts.
+                        </p>
+                        <p>
+                            We are a professional business that can offer construction, refurbishment, engineering and joinery services across a wide range of sectors.
+                        </p>
+                        <p>
+                            Our dedicated team has the knowledge and experience needed to ensure a smooth and successful completion of any project.
+                        </p>
+                        <p>
+                            We have the experience and the expertise needed to undertake the construction or renovation project of your dreams.
+                        </p>
+                            We are a general contractor that work closely with project owners to ensure that all wishes are taken into account.
+                        </p>
+                        </p>
+                            We can also advise on alternative solutions that could be less costly and take less time to complete without compromising standards and qualities.
                         </p>
                     </div>
                 </div>
