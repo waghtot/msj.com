@@ -1,14 +1,19 @@
 <?php
 
-if(isset($data) && !empty($data)){
-    $text = $data['text'];
-    $thatimage = $data['image'];
-}
+// if(isset($data) && !empty($data)){
+//     $text = $data['text'];
+//     $thatimage = $data['image'];
+// }
+
+
+error_log('inside slide file '.print_r($data, 1));
+
+
 ?>
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 slide_01" style="background-image:url(<?php echo $thatimage; ?>);">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 slide_01" style="background-image:url(<?php echo $data; ?>);">
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <?php

@@ -17,27 +17,27 @@
                 <div class="col-9">
                     <div>
                         <p>
-                            <h3>Welcome to our Web page.</h3>
+                            <h3>Building Dreams. Creating Spaces. Delivering Quality.</h3>
                         </p>
                         <p>
-                            MSJ Construction Ltd is a well established company working within London and surrounding areas having completed many successful projects.
+                            Welcome to MSJ Construction Ltd — your trusted partner for quality building and renovation projects across London and the surrounding areas
                         </p>
                         <p>
-                            With over 20 years of experience within the UK market our portfolio spans from challenging bespoke developments to large refurbishments and also new build contracts.
+                            With over 20 years of experience, we’ve brought hundreds of projects to life — from unique bespoke builds and stylish refurbishments to full-scale new development
                         </p>
                         <p>
-                            We are a professional business that can offer construction, refurbishment, engineering and joinery services across a wide range of sectors.
+                            No matter the size or scope, we take pride in delivering exceptional craftsmanship, attention to detail, and a smooth, stress-free experience from start to finish.
                         </p>
                         <p>
-                            Our dedicated team has the knowledge and experience needed to ensure a smooth and successful completion of any project.
+                            Our talented team covers everything from construction and refurbishment to engineering and joinery, so you can count on us to handle every part of your project — all under one roof.
                         </p>
                         <p>
-                            We have the experience and the expertise needed to undertake the construction or renovation project of your dreams.
+                            At MSJ Construction, we believe great results come from great communication. That’s why we work closely with you every step of the way — offering honest advice, creative ideas, and smart alternatives that save you time and money without ever cutting corners.
                         </p>
-                            We are a general contractor that work closely with project owners to ensure that all wishes are taken into account.
+                            Ready to bring your vision to life?
                         </p>
                         </p>
-                            We can also advise on alternative solutions that could be less costly and take less time to complete without compromising standards and qualities.
+                            Let’s build something amazing together.
                         </p>
                     </div>
                 </div>

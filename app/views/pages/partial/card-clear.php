@@ -9,8 +9,9 @@
         <?php
             if(isset($data['text'][1])){
                 echo "<p>";
-                    echo $data['text'][1];
+                    echo $data['text'][1]; 
                 echo "</p>";
+
             }
         ?>
         <!-- <button class="btn btn-md btn btn-dark float-right" id="view-more">view more</button> -->
