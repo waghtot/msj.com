@@ -13,6 +13,14 @@
                     <div>
                         <img src="app/views/img/100p.jpg" class="img-fluid">
                     </div>
+                    <div style="text-align:center; margin-top:20px;">
+                        <a href="app/views/img/cennik.pdf" target="_blank">
+                            <img src="app/views/img/pdf.png" class="img-fluid">
+                            <p>
+                                Our pricing
+                            </p>
+                        </a>
+                    </div>
                 </div>
                 <div class="col-9">
                     <div>
