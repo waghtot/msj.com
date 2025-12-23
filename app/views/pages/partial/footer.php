@@ -17,6 +17,16 @@
                 </p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 white">
+                <h6 class="white header-footer">Find Us on:</h6>
+                <p class="white text-footer">
+                    <a href="https://www.facebook.com/profile.php?id=100089136018946" target="_blanc">
+                        <img src="app/views/img/facebook.svg" class="media-icon">
+                    </a>
+                    <a href="https://www.instagram.com/maggiemsj?igsh=MWd6dDVqN3NxZ25waQ%3D%3D&utm_source=qr" target="_blanc">
+                        <img src="app/views/img/insta.svg" class="media-icon">
+                    </a>
+
+                </p>
             </div>
         </div>
     </div>

@@ -7,12 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInit9f6452c78078b04d5c0d139ecf558066
 {
     public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'ContentList' => __DIR__ . '/../..' . '/app/config/ContentList.php',
         'ContentManager' => __DIR__ . '/../..' . '/app/controllers/ContentManager.php',
         'ContentType' => __DIR__ . '/../..' . '/app/controllers/ContentType.php',
         'Home' => __DIR__ . '/../..' . '/app/controllers/Home.php',
         'Login' => __DIR__ . '/../..' . '/app/controllers/Login.php',
         'Router' => __DIR__ . '/../..' . '/app/config/Router.php',
+        'Set_Gallery' => __DIR__ . '/../..' . '/app/controllers/SetGallery.php',
         'SiteBuilder' => __DIR__ . '/../..' . '/app/controllers/SiteBuilder.php',
         'View' => __DIR__ . '/../..' . '/app/config/views.php',
         'wapiModel' => __DIR__ . '/../..' . '/app/models/wapimodel.php',
