@@ -247,3 +247,9 @@ body{
     font-weight: 900;
     z-index: 1101 !important;
 }
+
+.media-icon{
+    width:32px;
+    height:32px;
+    margin-right:10px;
+}

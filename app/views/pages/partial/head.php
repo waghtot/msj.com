@@ -17,7 +17,7 @@
                         <a href="app/views/img/cennik.pdf" target="_blank">
                             <img src="app/views/img/pdf.png" class="img-fluid">
                             <p>
-                                Our pricing
+                                Reactive Maintenance Rates
                             </p>
                         </a>
                     </div>
